@@ -16,7 +16,7 @@ Use cases for PopupBridge:
   s.homepage         = 'https://github.com/braintree/popup-bridge-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Braintree' => 'code@getbraintree.com' }
-  s.source           = { :git => 'https://github.com/braintree/popup-bridge-ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/pcicp/popup-bridge-ios.git', :branch => 'pcicp-patch-1' }
 
   s.ios.deployment_target = '9.0'
 

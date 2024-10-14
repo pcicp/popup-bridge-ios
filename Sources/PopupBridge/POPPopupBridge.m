@@ -88,7 +88,7 @@ NSString * const kPOPURLHost = @"popupbridgev1";
         [webView.configuration.userContentController addScriptMessageHandler:[[POPWeakScriptMessageDelegate alloc] initWithDelegate:self] name:kPOPScriptMessageHandlerName];
 
         NSString *javascript = [[[[self javascriptTemplate] stringByReplacingOccurrencesOfString:@"%%SCHEME%%" withString:scheme]  stringByReplacingOccurrencesOfString:@"%%SCRIPT_MESSAGE_HANDLER_NAME%%" withString:kPOPScriptMessageHandlerName] stringByReplacingOccurrencesOfString:@"%%HOST%%" withString:kPOPURLHost];
-        WKUserScript *script = [[WKUserScript alloc] initWithSource:javascript injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:YES];
+        WKUserScript *script = [[WKUserScript alloc] initWithSource:javascript injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
         [webView.configuration.userContentController addUserScript:script];
     }
     return self;
